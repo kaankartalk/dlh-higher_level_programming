@@ -1,2 +1,3 @@
-chmod +x 2-print_alphabet.py
-./2-print_alphabet.py
+#!/usr/bin/python3
+for c in range(97, 123):
+    print("{}".format(chr(c)), end="")
