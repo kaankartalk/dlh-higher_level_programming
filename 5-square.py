@@ -1,8 +1,9 @@
+
 #!/usr/bin/python3
 """Defines a Square class that can print itself."""
 
 
-clss Square:
+class Square:
     """Represents a square."""
 
     def __init__(self, size=0):
