@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Script adds command line.
+saves them to add_item.json.
 """
 
 import sys
@@ -14,6 +14,6 @@ try:
 except Exception:
     items = []
 
-iems.extend(sys.argv[1:])
+items.extend(sys.argv[1:])
 
 save_to_json_file(items, filename)
