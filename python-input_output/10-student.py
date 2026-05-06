@@ -15,8 +15,13 @@ class Student:
 
     def to_json(self, attrs=None):
         """
-        Return dictionary.
+        Return dictionary representation of the Student.
+        If attrs is a list of strings, return only those attributes.
         """
         if isinstance(attrs, list) and all(type(a) is str for a in attrs):
-            return {key: self.__dict__[key] for key in attrs if key in self.__dict__}
+            return {
+                key: self.__dict__[key]
+                for key in attrs
+                if key in self.__dict__
+            }
         return self.__dict__
