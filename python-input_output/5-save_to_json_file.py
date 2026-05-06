@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-converting a JSON string to a Python object.
+Python object to a file using JSON representation.
 """
 
 import json
 
 
-def from_json_string(my_str):
-    """Python object < JSON string."""
-    return join.loads(my_str)
-
+def save_to_json_file(my_obj, filename):
+    """Write an object to a text file using JSON representation."""
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump(my_obj, f)
