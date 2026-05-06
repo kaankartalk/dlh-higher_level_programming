@@ -1,4 +1,12 @@
 #!/usr/bin/python3
 """
-This module creates a Python object from a JSON file.
+python object from a JSON file.
 """
+
+import json
+
+
+def load_from_json_file(filename):
+    """ Python objet from a JSON file."""
+    with open(filename, "r", encoding="utf-8") as f:
+        return json.load(f)
