@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """
-This module contains a function that returns the JSON representation of an object.
+JSON string to a Python object.
 """
 
 import json
 
 
-def to_json_string(my_obj):
-    """Return the JSON string representation of an object."""
-    return json.dumps(my_obj)
+def from_json_string(my_str):
+    """Return the Python objct a JSON string."""
+    return json.loads(my_str)
