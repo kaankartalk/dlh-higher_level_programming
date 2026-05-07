@@ -3,7 +3,7 @@ import pickle
 
 
 class CustomObject:
-    df __init__(self, name, age, is_student):
+    def __init__(self, name, age, is_student):
         self.name = name
         self.age = age
         self.is_student = is_student
