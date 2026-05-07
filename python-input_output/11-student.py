@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 """
-Defines a Student class with JSON serialization/deserialization
+JSON serialization
 """
 
 
 class Student:
-    """Defines a student"""
+    """Define a student"""
 
     def __init__(self, first_name, last_name, age):
-        """Initialize a new Student"""
+        """new Student"""
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
@@ -16,7 +16,7 @@ class Student:
     def to_json(self, attrs=None):
         """
         Retrieves a dictionary representation of a Student instance.
-        If attrs is a list of strings, only those attributes are returned.
+        
         """
         if isinstance(attrs, list) and all(type(a) is str for a in attrs):
             return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
@@ -24,8 +24,7 @@ class Student:
 
     def reload_from_json(self, json):
         """
-        Replaces all attributes of the Student instance
-        using the provided dictionary.
+        Replaces all attributes.
         """
-        fr key, value in json.items():
+        for key, value in json.items():
             setattr(self, key, value)
