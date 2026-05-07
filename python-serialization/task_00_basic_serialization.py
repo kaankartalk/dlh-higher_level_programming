@@ -2,7 +2,7 @@
 import json
 
 
-df serialize_and_save_to_file(data, filename):
+def serialize_and_save_to_file(data, filename):
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(data, f)
 
